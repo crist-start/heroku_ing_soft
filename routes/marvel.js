@@ -40,7 +40,7 @@ router.post('/comic',(req,res,next)=>{
     if (err) {
       res.status(404).json({mensaje:"error al guardar"});
     } else {
-      res.status(201).jsos(datos);
+      res.status(201).json(datos);
     }
   });
 });

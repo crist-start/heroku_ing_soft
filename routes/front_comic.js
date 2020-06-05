@@ -4,7 +4,7 @@ const request = require('request');
 
 /* GET users listing. */
 router.get('/listar',(req,res,next)=>{
-  request.get('http://localhost:3000/marvel/api/comic/',(err,response,body) =>{
+  request.get('http://ingsoftceut.herokuapp.com/marvel/api/comic/',(err,response,body) =>{
     if(err) response.status(404).json({mensaje:'error al consumir get comic'})
     else res.render('comic_view',{'datos':JSON.parse(body)});
   });
